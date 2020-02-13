@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using RealmSqlStudio.RealmSql;
 
 namespace RealmSqlStudio.Parser
 {
@@ -21,6 +22,30 @@ namespace RealmSqlStudio.Parser
             sb.AppendLine($"Columns:{string.Join("|", Columns)}");
             sb.AppendLine($"Where:{string.Join("|", WhereClause.Select(x => x.ToString()))}");
             return sb.ToString();
+        }
+
+        internal bool AdaptWhereClause(SampleTable x)
+        {
+            foreach(var condition in WhereClause)
+            {
+                var value = x.GetType().GetProperty(condition.ColumnName).GetValue(x);
+                if (condition.ComparedOpe == "=" && value?.ToString() != condition.Condition)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        internal List<string> SelectColumns(SampleTable x)
+        {
+            var list = new List<string>();
+            foreach(var column in Columns)
+            {
+                var value = x.GetType().GetProperty(column).GetValue(x);
+                list.Add(value?.ToString());
+            }
+            return list;
         }
     }
 }

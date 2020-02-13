@@ -30,6 +30,10 @@ namespace RealmSqlStudio.Parser
 
         private WhereCondition[] ParseWhereClause()
         {
+            if (sqlString.IndexOf(WHERE) == -1)
+            {
+                return new WhereCondition[] { };
+            }
             int pFrom = sqlString.IndexOf(WHERE) + WHERE.Length;
             int pTo = sqlString.Length;
             return new WhereClauseParser(sqlString.Substring(pFrom, pTo - pFrom).Trim()).Parse();
