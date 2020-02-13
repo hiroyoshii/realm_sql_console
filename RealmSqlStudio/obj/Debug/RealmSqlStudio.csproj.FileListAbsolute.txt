@@ -1,0 +1,7 @@
+C:\Users\orien\source\repos\RealmSqlStudio\RealmSqlStudio\bin\Debug\RealmSqlStudio.exe.config
+C:\Users\orien\source\repos\RealmSqlStudio\RealmSqlStudio\bin\Debug\RealmSqlStudio.exe
+C:\Users\orien\source\repos\RealmSqlStudio\RealmSqlStudio\bin\Debug\RealmSqlStudio.pdb
+C:\Users\orien\source\repos\RealmSqlStudio\RealmSqlStudio\obj\Debug\RealmSqlStudio.csprojAssemblyReference.cache
+C:\Users\orien\source\repos\RealmSqlStudio\RealmSqlStudio\obj\Debug\RealmSqlStudio.csproj.CoreCompileInputs.cache
+C:\Users\orien\source\repos\RealmSqlStudio\RealmSqlStudio\obj\Debug\RealmSqlStudio.exe
+C:\Users\orien\source\repos\RealmSqlStudio\RealmSqlStudio\obj\Debug\RealmSqlStudio.pdb
